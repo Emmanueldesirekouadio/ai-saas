@@ -9,37 +9,12 @@ import AgensePluse from "./AgensePluse";
 import { Button } from "./ui/button";
 
 export default function Header() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "system";
     setTheme(savedTheme as "light" | "dark" | "system");
-
-    if (savedTheme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
-      document.documentElement.classList.toggle("dark", systemTheme === "dark");
-    } else {
-      document.documentElement.classList.toggle("dark", savedTheme === "dark");
-    }
-  }, []);
-
-  const setThemeAndSave = (newTheme: "light" | "dark" | "system") => {
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-
-    if (newTheme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
-      document.documentElement.classList.toggle("dark", systemTheme === "dark");
-    } else {
-      document.documentElement.classList.toggle("dark", newTheme === "dark");
-    }
-  };
+  }, [setTheme]);
 
   return (
     <header className="sticky top-0 left-0 right-0 px-4 md:px-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 z-50">
