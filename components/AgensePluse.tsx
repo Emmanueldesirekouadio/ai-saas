@@ -1,6 +1,6 @@
 type AgensePluseProps = {
   size?: "small" | "medium" | "large";
-  color?: "blue" | "green" | "yellow" | "red";
+  color?: "blue" | "green" | "purple";
 };
 
 export default function AgensePluse({
@@ -13,14 +13,13 @@ export default function AgensePluse({
     large: "w-16 h-16",
   };
   const colorClasses = {
-    blue: "bg-blue-700 shadow-[0_0_8px_4px_rgba(20,61,96,0.5)]",
+    blue: "bg-blue-700 shadow-[0_0_8px_4px_rgba(59,130,246,0.5)]",
     green: "bg-green-500 shadow-[0_0_8px_4px_rgba(34,197,94,0.5)]",
-    yellow: "bg-yellow-500 shadow-[0_0_8px_4px_rgba(234,179,8,0.5)]",
-    red: "bg-red-500 shadow-[0_0_8px_4px_rgba(239,68,68,0.5)]",
+    purple: "bg-purple-500 shadow-[0_0_8px_4px_rgba(168,85,247,0.5)]",
   };
   return (
     <div
-      className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full`}
+      className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
     ></div>
   );
 }

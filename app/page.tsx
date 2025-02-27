@@ -1,8 +1,5 @@
-"use client";
-
 import AgensePluse from "@/components/AgensePluse";
 import YoutubeVideoForm from "@/components/YoutubeVideoForm";
-import { gsap } from "gsap";
 import {
   Brain,
   Image as ImageIcon,
@@ -10,7 +7,6 @@ import {
   Sparkles,
   Video,
 } from "lucide-react";
-import { useEffect, useRef } from "react";
 
 const steps = [
   {
@@ -35,40 +31,35 @@ const steps = [
 const features = [
   {
     title: "AI Analysis",
-    description:
-      "Get deep insights into your content with AI analysis. Understand your audience better and create content that resonates.",
+    description: "Get deep insights into your content with AI analysis.",
     icon: Brain,
     iconBg: "bg-blue-100",
     iconColor: "text-blue-600",
   },
   {
     title: "Smart Transcription",
-    description:
-      "Get accurate transcripts of your videos with AI. Save time and focus on creating content.",
+    description: "Get accurate transcripts of your videos with AI.",
     icon: MessageSquare,
     iconBg: "bg-green-100",
     iconColor: "text-green-600",
   },
   {
     title: "Thumbnail Generation",
-    description:
-      "Generate eye-catching thumbnails for your videos with AI. Make your content stand out.",
+    description: "Generate eye-catching thumbnails for your videos with AI.",
     icon: ImageIcon,
     iconBg: "bg-yellow-100",
     iconColor: "text-yellow-600",
   },
   {
     title: "Shot Script",
-    description:
-      "Summarize your videos with AI. Save time and focus on creating content.",
+    description: "Summarize your videos with AI.",
     icon: Video,
     iconBg: "bg-red-100",
     iconColor: "text-red-600",
   },
   {
     title: "Discuss with your AI",
-    description:
-      "Discuss with your AI and get feedback on your content. Make your content better.",
+    description: "Get feedback and improve your content with AI.",
     icon: Sparkles,
     iconBg: "bg-purple-100",
     iconColor: "text-purple-600",
@@ -76,35 +67,9 @@ const features = [
 ];
 
 export default function Home() {
-  const heroRef = useRef(null);
-  const featuresRef = useRef(null);
-  const stepsRef = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      heroRef.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 1 }
-    );
-    gsap.fromTo(
-      featuresRef.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 1, delay: 0.5 }
-    );
-    gsap.fromTo(
-      stepsRef.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 1, delay: 1 }
-    );
-  }, []);
-
   return (
     <div className="min-h-screen bg-blue-100 dark:bg-gray-900">
-      {/* Hero section */}
-      <section
-        ref={heroRef}
-        className="py-20 min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800"
-      >
+      <section className="py-20 min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center gap-10 text-center mb-12">
             <AgensePluse size="large" color="blue" />
@@ -118,19 +83,16 @@ export default function Home() {
               AgentTube is your personal AI content agent. It helps you create
               content for your social media platforms.
             </p>
-            {/* Youtube video Form */}
             <YoutubeVideoForm />
           </div>
         </div>
       </section>
 
-      {/* Features section */}
-      <section ref={featuresRef} className="py-20 bg-blue-50 dark:bg-gray-800">
+      <section className="py-20 bg-blue-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
             Powerful features to boost your content
           </h2>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const Icon = feature.icon;
@@ -156,13 +118,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* How it works section */}
-      <section ref={stepsRef} className="py-20 bg-gray-50 dark:bg-gray-900">
+
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
             Meet your AI Agent in 3 Steps
           </h2>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((step, index) => {
               const Icon = step.icon;
@@ -186,8 +147,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Footer section   */}
-      <section className="py-20 px-4 md:px-0 bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-900 dark:to-blue-700">
+
+      <section className="py-20 px-4 md:px-0 bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-800 dark:to-blue-600">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to boost your content?
