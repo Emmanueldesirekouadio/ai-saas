@@ -21,8 +21,8 @@ importers:
         specifier: ^1.1.2
         version: 1.1.2(@types/react@19.0.10)(react@19.0.0)
       '@schematichq/schematic-components':
-        specifier: ^0.4.6
-        version: 0.4.6(@stripe/react-stripe-js@3.1.1(@stripe/stripe-js@5.7.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)
+        specifier: ^0.4.5
+        version: 0.4.5(@stripe/react-stripe-js@3.1.1(@stripe/stripe-js@5.7.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)
       '@schematichq/schematic-react':
         specifier: ^1.2.3
         version: 1.2.3(react@19.0.0)
@@ -830,8 +830,8 @@ packages:
   '@rushstack/eslint-patch@1.10.5':
     resolution: {integrity: sha512-kkKUDVlII2DQiKy7UstOR1ErJP8kUKAQ4oa+SQtM0K+lPdmmjj0YnnxBgtTVYH7mUKtbsxeFC9y0AmK7Yb78/A==}
 
-  '@schematichq/schematic-components@0.4.6':
-    resolution: {integrity: sha512-LhbSsKSWx8PJ1x9IGRk8vHtK63ldSQmhOpgAC3tAmq9B3ujyy9ixQjFlmg6XvuSqBSXFJVg3QerWcYEWGMQDnw==}
+  '@schematichq/schematic-components@0.4.5':
+    resolution: {integrity: sha512-qqGO3MikbmbcFxK7NKJDJflGrxsxq2FilZoE9eRUyrKlkdeOfyodIL1zbKSebq3/3el8QM9pRTBXlatBZ1uimA==}
     peerDependencies:
       '@stripe/react-stripe-js': '>=3'
       react: '>=18'
@@ -3217,7 +3217,7 @@ snapshots:
 
   '@rushstack/eslint-patch@1.10.5': {}
 
-  '@schematichq/schematic-components@0.4.6(@stripe/react-stripe-js@3.1.1(@stripe/stripe-js@5.7.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)':
+  '@schematichq/schematic-components@0.4.5(@stripe/react-stripe-js@3.1.1(@stripe/stripe-js@5.7.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)':
     dependencies:
       '@stripe/react-stripe-js': 3.1.1(@stripe/stripe-js@5.7.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stripe/stripe-js': 5.7.0
